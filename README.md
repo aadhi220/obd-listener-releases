@@ -27,16 +27,16 @@ This repository holds only the release files; the source code is kept elsewhere.
 **More info → Run anyway**. You can check the file against `SHA256SUMS.txt` first:
 
 ```powershell
-Get-FileHash .\obd-listener-0.3.0-windows-x64.exe -Algorithm SHA256
+Get-FileHash .\obd-listener-0.4.0-windows-x64.exe -Algorithm SHA256
 ```
 
 **With a real adapter**, open a terminal in the download folder:
 
 ```powershell
-.\obd-listener-0.3.0-windows-x64.exe listen scan
+.\obd-listener-0.4.0-windows-x64.exe listen scan
 ```
 ```powershell
-.\obd-listener-0.3.0-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
+.\obd-listener-0.4.0-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
 ```
 
 Then open http://127.0.0.1:8780.
@@ -49,6 +49,10 @@ Then open http://127.0.0.1:8780.
 
 **Replay a drive** with **▶ Replay** in the dashboard: a timeline shows the drive's speed and RPM with your MARK
 presses. Drag it to jump to the part you want to show; Space plays/pauses, `[` `]` skip 10 s, `M` goes to the next MARK.
+
+**Drives from your phone:** click **⇄ Sync → Pair a phone** and scan the QR code with the Android app in Phone mode. At home,
+opening the app on the phone (same Wi-Fi) sends the drives it collected in the car to this PC. Allow the app on
+private networks if Windows asks.
 
 **Your data** goes to `Documents\OBD Listener`: probe reports, dashboard recordings, uploads from the head-unit
 app, and your edited layouts. Nothing is sent anywhere.
@@ -65,8 +69,10 @@ app, and your edited layouts. Nothing is sent anywhere.
    speed). ✕ goes back to live data.
 5. **Phone mode:** install the same APK on your phone and pick **Phone**. On the head unit: Settings → **Pair a
    phone**, then point the phone's camera at the QR code and tap the link. From then on, opening the app on the
-   phone (with the head unit on its hotspot) copies new drives to the phone. Copying them on to the laptop is
-   coming in a later version.
+   phone (with the head unit on its hotspot) copies new drives to the phone; sending them on to the laptop is
+   handled by the PC app's **⇄ Sync** (see above).
+6. **Phone as a full app:** the phone screen's **Your car** section has a live dashboard (connects to the adapter
+   and records), replay and trouble codes.
 
 ## Safety
 
