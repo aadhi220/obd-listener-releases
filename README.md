@@ -27,16 +27,16 @@ This repository holds only the release files; the source code is kept elsewhere.
 **More info → Run anyway**. You can check the file against `SHA256SUMS.txt` first:
 
 ```powershell
-Get-FileHash .\obd-listener-0.2.0-windows-x64.exe -Algorithm SHA256
+Get-FileHash .\obd-listener-0.3.0-windows-x64.exe -Algorithm SHA256
 ```
 
 **With a real adapter**, open a terminal in the download folder:
 
 ```powershell
-.\obd-listener-0.2.0-windows-x64.exe listen scan
+.\obd-listener-0.3.0-windows-x64.exe listen scan
 ```
 ```powershell
-.\obd-listener-0.2.0-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
+.\obd-listener-0.3.0-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
 ```
 
 Then open http://127.0.0.1:8780.
@@ -63,8 +63,10 @@ app, and your edited layouts. Nothing is sent anywhere.
    default, for units whose lower screen doesn't respond).
 4. **Replay:** Settings → **Replay a drive** plays a recorded drive with a timeline (seek, ±10 s, next MARK,
    speed). ✕ goes back to live data.
-5. **Phone mode:** pairs with the head unit by scanning a QR code (Settings → Pair a phone on the head unit).
-   Syncing drives between devices is coming in a later version.
+5. **Phone mode:** install the same APK on your phone and pick **Phone**. On the head unit: Settings → **Pair a
+   phone**, then point the phone's camera at the QR code and tap the link. From then on, opening the app on the
+   phone (with the head unit on its hotspot) copies new drives to the phone. Copying them on to the laptop is
+   coming in a later version.
 
 ## Safety
 
