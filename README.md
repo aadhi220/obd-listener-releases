@@ -27,16 +27,16 @@ This repository holds only the release files; the source code is kept elsewhere.
 **More info → Run anyway**. You can check the file against `SHA256SUMS.txt` first:
 
 ```powershell
-Get-FileHash .\obd-listener-0.1.0-windows-x64.exe -Algorithm SHA256
+Get-FileHash .\obd-listener-0.2.0-windows-x64.exe -Algorithm SHA256
 ```
 
 **With a real adapter**, open a terminal in the download folder:
 
 ```powershell
-.\obd-listener-0.1.0-windows-x64.exe listen scan
+.\obd-listener-0.2.0-windows-x64.exe listen scan
 ```
 ```powershell
-.\obd-listener-0.1.0-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
+.\obd-listener-0.2.0-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
 ```
 
 Then open http://127.0.0.1:8780.
@@ -46,6 +46,9 @@ Then open http://127.0.0.1:8780.
   - Wi-Fi: `dash --tcp 192.168.0.10:35000`.
 - **Adapter report:** `listen probe --ble <address>` writes a report of what your adapter and car support.
 - **All options:** run with `--help` (for example `dash --help`).
+
+**Replay a drive** with **▶ Replay** in the dashboard: a timeline shows the drive's speed and RPM with your MARK
+presses. Drag it to jump to the part you want to show; Space plays/pauses, `[` `]` skip 10 s, `M` goes to the next MARK.
 
 **Your data** goes to `Documents\OBD Listener`: probe reports, dashboard recordings, uploads from the head-unit
 app, and your edited layouts. Nothing is sent anywhere.
@@ -58,7 +61,9 @@ app, and your edited layouts. Nothing is sent anywhere.
 3. **Head unit mode:** the dashboard talks to the BLE adapter directly and records every drive. Tap the dot at the
    top right for settings: adapter, layout, recording, and the unusable strip at the bottom of the screen (30 % by
    default, for units whose lower screen doesn't respond).
-4. **Phone mode:** pairs with the head unit by scanning a QR code (Settings → Pair a phone on the head unit).
+4. **Replay:** Settings → **Replay a drive** plays a recorded drive with a timeline (seek, ±10 s, next MARK,
+   speed). ✕ goes back to live data.
+5. **Phone mode:** pairs with the head unit by scanning a QR code (Settings → Pair a phone on the head unit).
    Syncing drives between devices is coming in a later version.
 
 ## Safety
