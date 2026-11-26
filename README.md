@@ -30,16 +30,16 @@ This repository holds only the release files; the source code is kept elsewhere.
 **More info → Run anyway**. You can check the file against `SHA256SUMS.txt` first:
 
 ```powershell
-Get-FileHash .\obd-listener-0.5.1-windows-x64.exe -Algorithm SHA256
+Get-FileHash .\obd-listener-0.6.0-windows-x64.exe -Algorithm SHA256
 ```
 
 **From a terminal** (in the download folder), for example:
 
 ```powershell
-.\obd-listener-0.5.1-windows-x64.exe listen scan
+.\obd-listener-0.6.0-windows-x64.exe listen scan
 ```
 ```powershell
-.\obd-listener-0.5.1-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
+.\obd-listener-0.6.0-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
 ```
 
 Then open the address it prints (http://127.0.0.1:8780, or another port if Windows has reserved that one).
@@ -56,6 +56,8 @@ presses. Drag it to jump to the part you want to show; Space plays/pauses, `[` `
 **Drives from your phone:** open **Phone sync → Pair a phone** and scan the QR code with the Android app in Phone mode. At home,
 opening the app on the phone (same Wi-Fi) sends the drives it collected in the car to this PC. Allow the app on
 private networks if Windows asks.
+
+**Updates:** Settings & about → **Check for updates** shows a newer version and its download. Nothing updates by itself.
 
 **Your data** goes to `Documents\OBD Listener`: probe reports, dashboard recordings, uploads from the head-unit
 app, and your edited layouts. Nothing is sent anywhere.
