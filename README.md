@@ -27,16 +27,16 @@ This repository holds only the release files; the source code is kept elsewhere.
 **More info → Run anyway**. You can check the file against `SHA256SUMS.txt` first:
 
 ```powershell
-Get-FileHash .\obd-listener-0.4.0-windows-x64.exe -Algorithm SHA256
+Get-FileHash .\obd-listener-0.4.1-windows-x64.exe -Algorithm SHA256
 ```
 
 **With a real adapter**, open a terminal in the download folder:
 
 ```powershell
-.\obd-listener-0.4.0-windows-x64.exe listen scan
+.\obd-listener-0.4.1-windows-x64.exe listen scan
 ```
 ```powershell
-.\obd-listener-0.4.0-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
+.\obd-listener-0.4.1-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
 ```
 
 Then open http://127.0.0.1:8780.
