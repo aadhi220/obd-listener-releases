@@ -30,19 +30,19 @@ This repository holds only the release files; the source code is kept elsewhere.
 **More info → Run anyway**. You can check the file against `SHA256SUMS.txt` first:
 
 ```powershell
-Get-FileHash .\obd-listener-0.5.0-windows-x64.exe -Algorithm SHA256
+Get-FileHash .\obd-listener-0.5.1-windows-x64.exe -Algorithm SHA256
 ```
 
 **From a terminal** (in the download folder), for example:
 
 ```powershell
-.\obd-listener-0.5.0-windows-x64.exe listen scan
+.\obd-listener-0.5.1-windows-x64.exe listen scan
 ```
 ```powershell
-.\obd-listener-0.5.0-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
+.\obd-listener-0.5.1-windows-x64.exe dash --ble AA:BB:CC:DD:EE:FF
 ```
 
-Then open http://127.0.0.1:8780.
+Then open the address it prints (http://127.0.0.1:8780, or another port if Windows has reserved that one).
 
 - **Other adapters:**
   - Bluetooth Classic or USB: `dash --port COM5`; pair it in Windows first (PIN 1234 or 0000).
